@@ -15,16 +15,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tests"}
       - label: "Component"
         name: "component"
-        widget: "list"
-        fields:
-          - label: "Component"
-            name: "component"
-            widget: "string"
-            default: "feature"
-          - label: "Component"
-            name: "component"
-            widget: "string"
-            default: "blog"
+        widget: "select"
+        options: ["feature", "blog"]
       - {label: "Image", name: "image", widget: "image" }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
