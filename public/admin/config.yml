@@ -10,22 +10,16 @@ collections:
     label: "Tests"
     folder: "content/tests"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{component}}"
+    slug: "{{order}}-{{component}}"
     delete: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tests"}
-      - label: "List"
-        name: "type"
-        widget: "list"
-        fields:
-          - label: "Field 1"
-            name: "field"
-            widget: "string"
-            default: "Field 1"
-          - label: "Field 2"
-            name: "field"
-            widget: "string"
-            default: "Field 2"
+      - label: "Order"
+        name: "order"
+        widget: "number"
+        valueType: "int"
+        min: 1
+        max: 20
       - label: "Component"
         name: "component"
         widget: "select"
