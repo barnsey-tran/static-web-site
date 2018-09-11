@@ -10,7 +10,7 @@ collections:
     label: "Tests"
     folder: "content/tests"
     create: true
-    slug: "{{order}}_{{component}}"
+    slug: "{{order}}-{{year}-{{month}}-{{day}}-{{minute}}-{{component}}"
     delete: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tests"}
