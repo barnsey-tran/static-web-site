@@ -1,5 +1,5 @@
-import path from "path";
 // markdown stuffs
+import path from "path";
 import { reloadRoutes } from "react-static/node";
 import jdown from "jdown";
 import marked from "marked";
