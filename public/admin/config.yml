@@ -13,7 +13,18 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tests"}
-      - {label: "Component", name: "component", widget: "list", default: ["news", "post", "some component"]}
+      - label: "Component"
+        name: "component"
+        widget: "list"
+        fields:
+          - label: "Component"
+            name: "component"
+            widget: "string"
+            default: "feature"
+          - label: "Component"
+            name: "component"
+            widget: "string"
+            default: "blog"
       - {label: "Image", name: "image", widget: "image" }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
