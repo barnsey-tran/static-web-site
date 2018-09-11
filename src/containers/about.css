@@ -1,0 +1,14 @@
+/*
+    Define style for the markdown tags
+*/
+.markdownContent {
+    background-color: #d8d6d6;
+}
+
+.markdownContent h1{
+    
+}
+
+.markdownContent p {
+    font-size: 14px;
+}

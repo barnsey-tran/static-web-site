@@ -1,0 +1,13 @@
+.post .mainImage, #mainImage {
+    display: inline-block;
+    width: 200px;
+}
+
+.post {
+    background-color: #eae6e6;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 16px;
+}

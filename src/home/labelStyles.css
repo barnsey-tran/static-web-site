@@ -1,0 +1,26 @@
+.labels .labelsContent {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.labels .label {
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+}
+
+.labels .labelImage {
+    max-width: 130px;
+    max-height: 130px;
+}
+
+.labels .labelFont {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,9 @@
+.postReview .postImage {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.postReview {
+    margin: 24px 0px;
+    padding: 0px 12px;
+}
