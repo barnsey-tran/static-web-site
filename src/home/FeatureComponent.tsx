@@ -12,24 +12,26 @@ export interface IFeatureComponentProps {
 export default class FeatureComponent extends React.Component<IFeatureComponentProps, any> {
     render () {
         return (
-            <div className="post">
+            <section className="feature">
                 <h1>{ this.props.item.title }</h1>
-                {
-                    this.props.item.imagePosition !== "right"
-                    && this.props.item.image
-                    &&  <div className="mainImage">
-                            <img src={ this.props.item.image } alt="main-image"/>
-                        </div>
-                }
-                <div> { convert(this.props.item.contents) }</div>
-                {
-                    this.props.item.imagePosition === "right"
-                    && this.props.item.image
-                    &&  <div className="mainImage">
-                            <img src={ this.props.item.image } alt="main-image"/>
-                        </div>
-                }
-            </div>
+                <div className="post">
+                    {
+                        this.props.item.imagePosition !== "right"
+                        && this.props.item.image
+                        &&  <div className="mainImage">
+                                <img src={ this.props.item.image } alt="main-image"/>
+                            </div>
+                    }
+                    <div> { convert(this.props.item.contents) }</div>
+                    {
+                        this.props.item.imagePosition === "right"
+                        && this.props.item.image
+                        &&  <div className="mainImage">
+                                <img src={ this.props.item.image } alt="main-image"/>
+                            </div>
+                    }
+                </div>
+            </section>
         );
     }
 }
