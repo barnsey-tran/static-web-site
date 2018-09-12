@@ -14,11 +14,13 @@ export default withRouteData((props: any) => {
   let sortedKeys = _.sortBy(Object.keys(data));
 
   _.each(sortedKeys, (key: string) => {
-    if (key.substr(1) === "Feature") {
+    let firstLetter: string = key.match(/[a-zA-Z]/).toString();
+    let componentType: string = key.substr(key.indexOf(firstLetter));
+    if ( componentType === "Feature") {
       content.push(<FeatureComponent key={ key } item={ data[key] }/>);
-    } else if (key.substr(1) === "News") {
+    } else if (componentType === "News") {
       content.push(<NewsComponent key={ key } item={ data[key] }/>);
-    } else if (key.substr(1) === "Labels") {
+    } else if (componentType === "Labels") {
       content.push(<Labels key={ key } item={ data[key] }/>);
     }
   });

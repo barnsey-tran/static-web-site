@@ -14,6 +14,12 @@ import matter from "gray-matter";
 // watch markdown content
 chokidar.watch("content").on("all", () => reloadRoutes());
 
+// configure path of assets for jdown
+const assetsConfig = {
+  path: "/public/assets",
+  output: "/assets/"
+};
+
 function setChildren(newsData) {
   let result = [];
 
@@ -86,8 +92,8 @@ export default {
   }),
   getRoutes: async () => {
     // load markdown contents
-    const home = await jdown("content/home");
-    const news = await jdown("content/news");
+    const home = await jdown("content/home", { assets: assetsConfig });
+    const news = await jdown("content/news", { assets: assetsConfig });
     const tests = await getPosts();
     return [
       {
@@ -95,8 +101,7 @@ export default {
         component: "src/containers/Home",
         getData: () => {
           return ({
-            data: home,
-            tests: tests
+            data: home
           });
         },
       },

@@ -10,23 +10,23 @@ export interface IFeatureComponentProps {
     item: any;
 }
 export default class FeatureComponent extends React.Component<IFeatureComponentProps, any> {
-
     render () {
         return (
             <div className="post">
+                <h1>{ this.props.item.title }</h1>
                 {
-                    this.props.item.position !== "right"
-                    && this.props.item.featureImage
+                    this.props.item.imagePosition !== "right"
+                    && this.props.item.image
                     &&  <div className="mainImage">
-                            <img src={ this.props.item.featureImage } alt="main-image"/>
+                            <img src={ this.props.item.image } alt="main-image"/>
                         </div>
                 }
                 <div> { convert(this.props.item.contents) }</div>
                 {
-                    this.props.item.position === "right"
-                    && this.props.item.featureImage
+                    this.props.item.imagePosition === "right"
+                    && this.props.item.image
                     &&  <div className="mainImage">
-                            <img src={ this.props.item.featureImage } alt="main-image"/>
+                            <img src={ this.props.item.image } alt="main-image"/>
                         </div>
                 }
             </div>
