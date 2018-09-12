@@ -8,7 +8,7 @@ public_folder: "/assets"
 
 collections:
   - name: "home"
-    label: "Home View"
+    label: "Home"
     folder: "content/home"
     create: true
     # order of the segments can be adjusted by the order variable

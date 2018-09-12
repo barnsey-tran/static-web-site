@@ -150,7 +150,7 @@ export default {
           defaultLoaders.cssLoader,
           defaultLoaders.fileLoader,
         ],
-      },
+      }
     ];
 
     config.plugins.push(new ExtractTextPlugin("styles.css"));
