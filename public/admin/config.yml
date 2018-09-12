@@ -3,29 +3,57 @@ backend:
   branch: master
 
 media_folder: "public/assets"
-public_folder: "/public/assets"
+# default to media_folder if not provided
+# public_folder: "/public/assets"
 
 collections:
-  - name: "test"
-    label: "Tests"
-    folder: "content/tests"
+  - name: "home"
+    label: "Home View"
+    folder: "content/home"
     create: true
+    # order of the segments can be adjusted by the order variable
     slug: "{{order}}-{{year}}-{{month}}-{{day}}-{{minute}}-{{component}}"
     delete: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tests"}
+      - label: "Template Key"
+        name: "templateKey"
+        widget: "hidden"
+        default: "home"
+
       - label: "Order"
         name: "order"
         widget: "number"
         valueType: "string"
         min: 1
         max: 20
+
+      # type of react component used to render this segment
       - label: "Component"
         name: "component"
         widget: "select"
         options: ["feature", "blog"]
-      - {label: "Image", name: "image", widget: "image", required: false }
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Image Position"
+        name: "imagePosition"
+        widget: "select"
+        options: ["left", "right"]
+        default: "left"
+
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
 
