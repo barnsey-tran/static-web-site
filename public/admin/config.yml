@@ -31,7 +31,7 @@ collections:
       - label: "Component"
         name: "component"
         widget: "select"
-        options: ["feature", "blog"]
+        options: ["feature", "news"]
 
       - label: "Image"
         name: "image"

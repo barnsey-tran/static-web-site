@@ -1,4 +1,4 @@
-.news .mainImage, #mainImage {
+.news .mainImage{
     display: inline-block;
     margin: auto;
     width: 200px;

@@ -15,7 +15,7 @@ export default class NewsComponent extends React.Component<INewsComponentProps, 
         return (
             <div className="news">
                 <div className="mainImage">
-                    { this.props.item.featureImage && <img src={ this.props.item.featureImage } alt="main-image"/> }
+                    { this.props.item.image && <img src={ this.props.item.image } alt="main-image"/> }
                 </div>
                 <div> { convert(this.props.item.contents) }</div>
                 <a className="linkButton" target="_blank" href="http://myriota.com/">Learn More </a>
