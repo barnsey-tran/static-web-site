@@ -2,7 +2,7 @@
 //  Myriota Pty Ltd
 //  Myriota Confidential
 
-import React from "react";
+import * as React from "react";
 const convert = require("htmr");
 import "./styles.css";
 

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import FeatureComponent from "../home/FeatureComponent";
 
 const FeaturePreviewComponent = (props: any) => (
