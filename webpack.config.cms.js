@@ -13,8 +13,9 @@ var webPackPlugins = [
         template: "./src/cms/index.html"
     }),
     // configure css file name
+    // no hash because file name is hardcoded in cms registration
     new ExtractTextPlugin({
-        filename: "styles.[hash].css"
+        filename: "styles.css"
     })
 ];
 
