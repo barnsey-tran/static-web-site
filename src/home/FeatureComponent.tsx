@@ -4,7 +4,7 @@
 
 import * as React from "react";
 const convert = require("htmr");
-import "./styles.css";
+import styles from "./styles.css";
 
 export interface IFeatureComponentProps {
     item: any;
@@ -14,15 +14,14 @@ export interface IFeatureComponentProps {
         super(props);
     }
     render () {
-        console.log("Rendering Feature Component");
         return (
-            <section className="feature">
+            <section className={styles.feature}>
                 <h1>{ this.props.item.title }</h1>
-                <div className="post">
+                <div className={styles.post}>
                     {
                         this.props.item.imagePosition !== "right"
                         && this.props.item.image
-                        &&  <div className="mainImage">
+                        &&  <div className={styles.mainImage}>
                                 <img src={ this.props.item.image } alt="main-image"/>
                             </div>
                     }
@@ -30,7 +29,7 @@ export interface IFeatureComponentProps {
                     {
                         this.props.item.imagePosition === "right"
                         && this.props.item.image
-                        &&  <div className="mainImage">
+                        &&  <div className={styles.mainImage}>
                                 <img src={ this.props.item.image } alt="main-image"/>
                             </div>
                     }
