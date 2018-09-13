@@ -77,12 +77,12 @@ module.exports = {
             root: "ReactDOM"
         },
         // index.html already include netlify-cms
-        "netlify-cms": {
-            commonjs: "netlify-cms",
-            commonjs2: "netlify-cms",
-            amd: "NetlifyCMS",
-            root: "NetlifyCMS"
-        }
+        // "netlify-cms": {
+        //     commonjs: "netlify-cms",
+        //     commonjs2: "netlify-cms",
+        //     amd: "NetlifyCMS",
+        //     root: "NetlifyCMS"
+        // }
     },
     module: {
         rules: [
