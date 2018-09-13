@@ -43,44 +43,6 @@ function setChildren(newsData) {
 }
 
 
-function getPosts () {
-  const items = [];
-  // Walk ("klaw") through posts directory and push file paths into items array //
-  const getFiles = () => new Promise(resolve => {
-    // Check if posts directory exists //
-    if (fs.existsSync("./content/tests")) {
-      klaw("./content/tests")
-        .on("data", item => {
-          // Filter function to retrieve .md files //
-          if (path.extname(item.path) === ".md") {
-            // If markdown file, read contents //
-            const data = fs.readFileSync(item.path, "utf8");
-            // Convert to frontmatter object and markdown content //
-            const dataObj = matter(data);
-            // Create slug for URL //
-            dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
-            // Remove unused key //
-            delete dataObj.orig;
-            // Push object into items array //
-            items.push(dataObj);
-          }
-        })
-        .on("error", e => {
-          console.log(e);
-        })
-        .on("end", () => {
-          // Resolve promise for async getRoutes request //
-          // posts = items for below routes //
-          resolve(items);
-        });
-    } else {
-      // If src/posts directory doesn"t exist, return items as empty array //
-      resolve(items);
-    }
-  });
-  return getFiles();
-}
-
 // Paths Aliases defined through tsconfig.json
 const typescriptWebpackPaths = require("./webpack.config.js");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -94,7 +56,6 @@ export default {
     // load markdown contents
     const home = await jdown("content/home", { assets: assetsConfig });
     const news = await jdown("content/news", { assets: assetsConfig });
-    const tests = await getPosts();
     return [
       {
         path: "/",

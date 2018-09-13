@@ -6,12 +6,14 @@
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",
-    "build": "react-static build",
+    "build": "find ./public/admin ! -name \"config.yml\" -type f -delete && ./node_modules/.bin/webpack --config webpack.config.cms.js && react-static build",
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-loader": "^6.4.1",
     "chokidar": "^2.0.4",
+    "html-loader": "^0.5.5",
     "htmr": "^0.7.0",
     "jdown": "^0.6.4",
     "lodash": "^4.17.10",
@@ -19,7 +21,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
-    "react-router": "^4.2.0"
+    "react-router": "^4.2.0",
+    "webpack": "^3.12.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
