@@ -11,6 +11,7 @@ export interface IFeatureComponentProps {
 }
 export default class FeatureComponent extends React.Component<IFeatureComponentProps, any> {
     render () {
+        console.log("Rendering Feature Component");
         return (
             <section className="feature">
                 <h1>{ this.props.item.title }</h1>
