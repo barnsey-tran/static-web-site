@@ -15,7 +15,7 @@ var webPackPlugins = [
     // configure css file name
     // no hash because file name is hardcoded in cms registration
     new ExtractTextPlugin({
-        filename: "styles.css"
+        filename: "preview_styles.css"
     })
 ];
 
