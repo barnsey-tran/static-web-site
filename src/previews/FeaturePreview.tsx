@@ -1,7 +1,7 @@
 import React from "react";
 import FeatureComponent from "../home/FeatureComponent";
 
-const FeaturePreviewComponent = (props: any) => (
+export default (props: any) => (
   <FeatureComponent
     item = {{
       title: props.entry.getIn(["data", "title"]),
@@ -11,5 +11,3 @@ const FeaturePreviewComponent = (props: any) => (
     }}
   />
 );
-
-export default FeaturePreviewComponent;

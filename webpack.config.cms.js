@@ -49,6 +49,7 @@ module.exports = {
     output: {
         path: __dirname + "/public/admin",
         filename: fileNameConfig,
+        libraryTarget: "umd"
     },
     devtool: false,
     resolve: {
@@ -67,13 +68,13 @@ module.exports = {
         react: {
             commonjs: "react",
             commonjs2: "react",
-            amd: "React",
+            amd: "react",
             root: "React"
         },
         "react-dom": {
             commonjs: "react-dom",
             commonjs2: "react-dom",
-            amd: "ReactDOM",
+            amd: "react-dom",
             root: "ReactDOM"
         },
         // index.html already include netlify-cms
