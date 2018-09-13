@@ -9,7 +9,10 @@ import "./styles.css";
 export interface IFeatureComponentProps {
     item: any;
 }
-export default class FeatureComponent extends React.Component<IFeatureComponentProps, any> {
+ class FeatureComponent extends React.Component<IFeatureComponentProps, any> {
+    constructor(props: any) {
+        super(props);
+    }
     render () {
         console.log("Rendering Feature Component");
         return (
@@ -36,3 +39,5 @@ export default class FeatureComponent extends React.Component<IFeatureComponentP
         );
     }
 }
+
+export default FeatureComponent;
