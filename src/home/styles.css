@@ -7,10 +7,13 @@
 
 .mainImage {
     display: inline-block;
-    width: 200px;
 }
 
 .post {
     display: flex;
     justify-content: space-between;
+}
+
+.image {
+    max-width: 200px;
 }

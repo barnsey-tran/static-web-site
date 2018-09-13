@@ -22,7 +22,7 @@ export interface IFeatureComponentProps {
                         this.props.item.imagePosition !== "right"
                         && this.props.item.image
                         &&  <div className={styles.mainImage}>
-                                <img src={ this.props.item.image } alt="main-image"/>
+                                <img className={ styles.image } src={ this.props.item.image } alt="main-image"/>
                             </div>
                     }
                     <div> { convert(this.props.item.contents) }</div>
@@ -30,7 +30,7 @@ export interface IFeatureComponentProps {
                         this.props.item.imagePosition === "right"
                         && this.props.item.image
                         &&  <div className={styles.mainImage}>
-                                <img src={ this.props.item.image } alt="main-image"/>
+                                <img className={ styles.image } src={ this.props.item.image } alt="main-image"/>
                             </div>
                     }
                 </div>
