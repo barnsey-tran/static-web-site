@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { withRouteData } from "react-static";
 const convert = require("htmr");
-import "./home.css";
+import styles from "./home.css";
 import FeatureComponent from "../home/FeatureComponent";
 import NewsComponent from "../home/NewsComponent";
 import Labels from "../home/LabelsComponent";
@@ -26,7 +26,7 @@ export default withRouteData((props: any) => {
   });
   let metaData: any = data["meta"];
   return (
-      <div>
+      <div className={ styles.content }>
         {
           metaData && <ReactHelmet>
                           <title>Myriota - { metaData.title }</title>

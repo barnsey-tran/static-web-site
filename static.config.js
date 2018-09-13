@@ -42,7 +42,6 @@ function setChildren(newsData) {
   return result;
 }
 
-
 // Paths Aliases defined through tsconfig.json
 const typescriptWebpackPaths = require("./webpack.config.js");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -81,6 +80,13 @@ export default {
     ];
   },
   webpack: (config, { defaultLoaders }) => {
+    // modify css default loaders
+    // to create unique css class names
+    const cssLoader  = _.find(defaultLoaders.cssLoader.loader, (dl) => {
+      return dl.loader === "css-loader";
+    });
+    cssLoader.options = { ... cssLoader.options, ...{ modules: true, localIdentName: "[name]_[local]_[hash:base64:5]"}};
+
     // Add .ts and .tsx extension to resolver
     config.resolve.extensions.push(".ts", ".tsx");
 
