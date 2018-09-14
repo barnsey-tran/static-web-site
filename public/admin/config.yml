@@ -75,15 +75,15 @@ collections:
         widget: "string"
 
       - label: "Image"
-        name: "image",
-        widget: "image",
+        name: "image"
+        widget: "image"
         required: false
 
       - label: "Description"
         name: "description"
-        widget: "text",
+        widget: "text"
         required: false
 
       - label: "Body"
-        name: "body",
+        name: "body"
         widget: "markdown"
