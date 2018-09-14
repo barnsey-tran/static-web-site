@@ -23,21 +23,21 @@ export default withRouteData((props: Props) => {
             <div>
                 {
                     sortedKeys.map((key: string) => {
-                        if (key !== "meta") {
                             let post: any = data[key];
-                            return <PostReviewComponent
-                                key={ post.id }
-                                contents={ post.contents }
-                                title={ post.title }
-                                image={ post.image }
-                                link={ <Link to={ "/news/" + post.id }>Read more</Link>}
-                                helmet={
-                                    <ReactHelmet>
-                                        <meta name={"news:post:" + post.id} content={ post.description }/>
-                                    </ReactHelmet>
-                                    }
-                                />;
-                        }
+                            if (post.title) {
+                                return <PostReviewComponent
+                                    key={ key }
+                                    contents={ post.contents }
+                                    title={ post.title }
+                                    image={ post.image }
+                                    link={ <Link to={ "/news/" + key }>Read more</Link>}
+                                    helmet={
+                                        <ReactHelmet>
+                                            <meta name={"news:post:" + key} content={ post.description }/>
+                                        </ReactHelmet>
+                                        }
+                                    />;
+                            }
                     })
                 }
             </div>

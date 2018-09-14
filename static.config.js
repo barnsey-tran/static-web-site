@@ -24,19 +24,19 @@ function setChildren(newsData) {
   let result = [];
 
   _.sortBy(Object.keys(newsData)).map((key) => {
-    if (key !== "meta") {
       const post = newsData[key];
-      result.push({
-        path: `/${ post.id }`,
-        component: "src/news/PostWrapperComponent",
-        getData: () => ({
-            contents: post.contents,
-            title: post.title,
-            image: post.image,
-            description: post.description
-        })
-      });
-    }
+      if (post.title) {
+        result.push({
+          path: `/${ key }`,
+          component: "src/news/PostWrapperComponent",
+          getData: () => ({
+              contents: post.contents,
+              title: post.title,
+              image: post.image,
+              description: post.description
+          })
+        });
+      }
   });
 
   return result;
