@@ -60,7 +60,7 @@ collections:
   # news page
   - name: "news"
     label: "News"
-    folder: "content/blogs"
+    folder: "content/news"
     create: true
     delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{slug}}"
