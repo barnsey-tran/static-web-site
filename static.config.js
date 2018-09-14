@@ -54,7 +54,7 @@ export default {
   getRoutes: async () => {
     // load markdown contents
     const home = await jdown("content/home", { assets: assetsConfig });
-    const news = await jdown("content/news", { assets: assetsConfig });
+    const news = await jdown("content/blogs", { assets: assetsConfig });
     return [
       {
         path: "/",
