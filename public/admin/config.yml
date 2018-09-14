@@ -57,3 +57,33 @@ collections:
         widget: "markdown"
         required: false
 
+  # news page
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{slug}}"
+    delete: true
+    fields:
+      - label: "Template Key"
+        name: "templateKey"
+        widget: "hidden"
+        default: "news"
+
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Image"
+        name: "image",
+        widget: "image",
+        required: false
+
+      - label: "Description"
+        name: "description"
+        widget: "text",
+        required: false
+
+      - label: "Body"
+        name: "body",
+        widget: "markdown"
