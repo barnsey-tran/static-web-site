@@ -74,6 +74,12 @@ collections:
         name: "title"
         widget: "string"
 
+      - label: "Date"
+        name: "name"
+        widget: "date"
+        default: ""
+        format: "Do MMM YYYY"
+
       - label: "Image"
         name: "image"
         widget: "image"
