@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: github
+  repo: barnsey-tran/static-web-site
+  branch: dev
+  base_url: https://githubauthproviderfornetlify.herokuapp.com
 
 media_folder: "public/assets"
 # default to media_folder if not provided
